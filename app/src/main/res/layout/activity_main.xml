@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="leban.nait.ca.shoppinglist.MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shoppinglabel"
+        android:text="@string/shopping_label_en"
+        android:layout_alignParentTop="true"
+        android:textSize="50dp"
+        android:textAlignment="center"/>
+
+
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/shoppinglist"
+        android:layout_below="@+id/shoppinglabel"
+        android:layout_alignParentEnd="true"></ListView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textfood"
+        android:layout_above="@+id/quantityText"
+        android:layout_alignParentEnd="true" />
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/quantityText"
+        android:layout_above="@+id/addButton"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodspinner"
+        android:gravity="left|center_vertical|center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/shoppinglist" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addButton"
+        android:text="@string/add_button_text"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateButton"
+        android:text="@string/update_button_text"
+        android:layout_alignTop="@+id/addButton"
+        android:layout_toEndOf="@+id/addButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteButton"
+        android:text="@string/delete_button_text"
+        android:layout_alignTop="@+id/updateButton"
+        android:layout_toStartOf="@+id/clearbutton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clearbutton"
+        android:layout_alignTop="@+id/deleteButton"
+        android:layout_alignEnd="@+id/foodspinner" />
+
+
+</RelativeLayout>
